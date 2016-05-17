@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Guestbook</title>
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <header>
@@ -11,25 +11,16 @@
         </header>
         <p>Thanks for visiting my site, please sign my guestbook and let me know
         your favorite color.</p>
-        <!--
-            When this form submits, the file specified in the action will
-            receive a get request.
-        -->
-        <form method="get" action="lib/view.php">
+        <form>
             <input type="submit" value="View guestbook!">
-        </form>        
+        </form>
         <p>Please sign my guestbook!</p>        
-        <!--
-            When this form submits, the file specified in the action will
-            receive a get request. Any named inputs will also be sent along and
-            made available within the PHP file.
-        -->
-        <form method="post" action="lib/sign.php">
+        <form>
             <label>First Name:
-                <input type="text" name="firstname" size="30" maxlength="30" required>
+                <input type="text" name="firstname" required>
             </label>
             <label>Last Name:
-                <input type="text" name="lastname" size="30" maxlength="30" required>
+                <input type="text" name="lastname" required>
             </label>
             <label>Favorite Color:
                 <select name="color" required>
