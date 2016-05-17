@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Guestbook</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Jon's Guestbook</h1>
+        </header>
+        <!--
+            When this form submits, the file specified in the action will
+            receive a get request.
+        -->
+        <p>Thanks for visiting my site, please sign my guesbook and let me know
+        your favorite color.</p>
+        <form method="get" action="lib/view.php">
+            <input type="submit" value="View guestbook!">
+        </form>        
+        <!--
+            When this form submits, the file specified in the action will
+            receive a get request. Any named inputs will also be sent along and
+            made available within the PHP file.
+        -->
+        <p>Please sign my guestbook!</p>        
+        <form method="post" action="lib/sign.php">
+            <label>First Name:
+                <input type="text" name="firstname" size="30" maxlength="30" required>
+            </label>
+            <label>Last Name:
+                <input type="text" name="lastname" size="30" maxlength="30" required>
+            </label>
+            <label>Favorite color:
+                <select name="color" required>
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="purple">Purple</option>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                </select>
+            </label>
+            <input type="submit" value="Sign!">
+        </form>
+    </body>
+</html>
