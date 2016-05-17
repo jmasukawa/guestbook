@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Guestbook</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Jon's Guestbook</h1>
+        </header>
+        <p>Thanks for visiting my site, please sign my guestbook and let me know
+        your favorite color.</p>
+        <form method="get" action="view.php">
+            <input type="submit" value="View guestbook!">
+        </form>
+        <p>Please sign my guestbook!</p>        
+        <form method="post" action="sign.php">
+            <label>First Name:
+                <input type="text" name="firstname" required>
+            </label>
+            <label>Last Name:
+                <input type="text" name="lastname" required>
+            </label>
+            <label>Favorite Color:
+                <select name="color" required>
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="purple">Purple</option>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                </select>
+            </label>
+            <input type="submit" value="Sign!">
+        </form>
+    </body>
+</html>
