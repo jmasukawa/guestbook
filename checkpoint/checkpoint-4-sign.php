@@ -33,10 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // If a row was affected by the SQL statement, write a success message.
     if ($rowCount) {
-        readfile('thanks.html');
+        echo '<h1>Thanks for signing!</h1>';
     } else {
         // If no row was affected, write a failure message.
-        readfile('error.html');
+        echo '<h1>Error has occurred</h1>';
     }
 }
 ?>

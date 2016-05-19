@@ -42,8 +42,12 @@
             $sql = 'SELECT * FROM visitors';
 
             // For each row that was retrieved from the query, print out the
-            // first name, last name, and color in table data cells.
-            foreach ($dbh->query($sql) as $currentRow) {
+            // first name, last name, and color in table data cells. The
+            // database handler as a pre-defined function called "query" that
+            // sends the SQL string to the database, and returns the results as
+            // an array of rows/records.
+            $result = $dbh->query($sql);
+            foreach ($result as $currentRow) {
                 // Extract the information from the current row being processed.
                 $firstname = $currentRow['firstname'];
                 $lastname = $currentRow['lastname'];
