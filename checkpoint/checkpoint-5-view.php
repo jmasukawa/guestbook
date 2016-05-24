@@ -7,16 +7,6 @@
 <body>
     <h1>Guestbook</h1>
     <p>These people signed my guestbook:</p>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Favorite Color</th>
-                <th>Time Signed</th>
-            </tr>
-        </thead>
-        <tbody>
         <?php
         // The script below retrieves stored visitors info and displays them.
 
@@ -56,37 +46,15 @@
                 // Remember, a row is a "record" of the database. In PHP, this
                 // appears as an associative array with each key named as an 
                 // attribute/column of the table.
-                $firstname = $currentRow['firstname'];
-                $lastname = $currentRow['lastname'];
-                $color = $currentRow['color'];
+                $id = $currentRow['id']; // integer
+                $firstname = $currentRow['firstname']; // string
+                $lastname = $currentRow['lastname']; // string
+                $color = $currentRow['color']; // string
                 $timestamp = $currentRow['timestamp']; // string
-                
-                // Write the HTML for the table rows that contain each visitor's
-                // information. The 'echo' function works just like JavaScript's
-                // document.write function.
-                echo '<tr>';
-                // NOTE: double quoted strings in PHP will interpret variable
-                // names as the actual values that they contain. This can be
-                // useful and easier to read in some circumstances. If
-                // $firstname = 'Jon', the line below would print "<td>Jon</td>"
-                echo "<td>$firstname</td>";
-                echo "<td>$lastname</td>";
-                echo "<td style='color: $color;'>$color</td>";
-                echo "<td>$timestamp</td>";
-                echo '</tr>';
+
+                echo "<p>$id, $firstname, $lastname, $color, $timestamp</p>";
             }
         }
         ?>
-        </tbody>
-    </table>
-    <!-- back button for the user to go back once they reach this page -->
-    <button onclick="goBack();">Go Back</button>
-    <script>
-        // This function will have similar behavior to clicking the 'back arrow'
-        // in a browser.
-        function goBack() {
-            window.history.back();
-        }
-    </script>
 </body>
 </html>

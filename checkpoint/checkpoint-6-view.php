@@ -37,7 +37,7 @@
             // it to do things like insert records or retrieve records and it
             // will relay the action to the database for us.
             $dbh = new PDO($dsn, $username, $password);
-            
+
             // Create a basic SQL statement that selects all rows from the 
             // visitors table, which is defined in the guestbook database.
             $sql = 'SELECT * FROM visitors;';
