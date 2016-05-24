@@ -3,7 +3,7 @@
 // message to the user.
 
 // If a get request is received, then lets return all the signatures.
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Get the visitor's information by the "name" attribute of the input
     // element in the user HTML form.
     $firstname = $_POST['firstname'];

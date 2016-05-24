@@ -8,7 +8,7 @@
     <h1>Thanks for signing my guestbook!</h1>
     <?php
     // Only do anything if a post request was sent to this form handler.
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Get the visitor's information by the "name" attribute of the input
         // element in the user HTML form.
         $firstname = $_POST['firstname'];

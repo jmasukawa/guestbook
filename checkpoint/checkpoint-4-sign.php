@@ -3,7 +3,7 @@
 // message to the user.
 
 // If a get request is received, then lets return all the signatures.
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Get the visitor's information by the "name" attribute of the input
     // element in the user HTML form.
     $firstname = $_POST['firstname'];
@@ -13,12 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Create a data source name string. This is a connection string to the
     // database from PHP.
     $dsn = 'mysql:host=localhost;dbname=guestbook';
-    $username = 'jmasukawa';
+    $username = 'jmasukawa'; // change to your own username
     $password = '';
 
     // Get a database handler PHP Data Object (PDO). We use the DSN to
     // connect to the database in this statement. The database handler is
-    // an object that will relay actions to the database for us, like inserting
+    // an object that will relay actions to the database for us like inserting
     // or retrieving records.
     $dbh = new PDO($dsn, $username, $password);
     

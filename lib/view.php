@@ -20,7 +20,7 @@
         // The script below retrieves stored visitors info and displays them.
 
         // If a GET request is received, then return all visitors.
-        if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             // Create a data source name string. This is a connection string
             // to the database from PHP, and defines what kind of database we
             // are talking to, the hostname of the DBMS, and the database name
@@ -39,7 +39,7 @@
 
             // Create a basic SQL statement that selects all rows from the 
             // visitors table, which is defined in the guestbook database.
-            $sql = 'SELECT * FROM visitors';
+            $sql = 'SELECT * FROM visitors;';
 
             // For each row that was retrieved from the query, print out the
             // first name, last name, and color in table data cells. The
