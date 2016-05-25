@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $rowCount = $dbh->exec($sql);
     
     // If a row was affected by the SQL statement, write a success message.
-    if ($rowCount) {
+    if ($rowCount != 0) {
         echo '<h1>Thanks for signing!</h1>';
     } else {
         // If no row was affected, write a failure message.

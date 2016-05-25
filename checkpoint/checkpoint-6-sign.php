@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $rowCount = $dbh->exec($sql);
     
     // If a row was affected by the SQL statement, write a success message.
-    if ($rowCount) {
+    if ($rowCount != 0) {
         // Prints the contents of thanks.html to this file. You can think of
         // this like using "echo" on every line of the file specified.
         readfile('thanks.html');
